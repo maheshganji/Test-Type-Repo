@@ -32,7 +32,7 @@ jobs:
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
           job-name: 'Integration Tests'
-          xml-report-filename: target/surefire-reports/testng-results.xml
+          xml-report-filename: JestFolder/jest-junit.xml
 
       - name: ServiceNow DevOps NUint Test Results
         uses: ServiceNow/servicenow-devops-test-report@main
@@ -43,7 +43,7 @@ jobs:
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
           job-name: 'Integration Tests'
-          xml-report-filename: target/surefire-reports/testng-results.xml
+          xml-report-filename: NunitFolder/NUnit.xml
   deploy:
     name: Deploy
     needs: integrationTest
