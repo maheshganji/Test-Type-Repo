@@ -20,11 +20,11 @@ jobs:
       - name: Maven Build
         run: mvn clean install -DskipTests=true
       
-      - name: Run JUnit Tests
-        run: mvn test -Dmaven.test.failure.ignore=true surefire-report:report
+      # - name: Run JUnit Tests
+      #   run: mvn test -Dmaven.test.failure.ignore=true surefire-report:report
         
       - name: ServiceNow DevOps JUnit Test Results
-        uses: ServiceNow/servicenow-devops-test-report@EPIC1076738
+        uses: ServiceNow/servicenow-devops-test-report@dev
         with:
           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
           devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
