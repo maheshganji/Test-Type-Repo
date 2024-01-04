@@ -1,4 +1,4 @@
-name: GitHub Test Custom Action
+name: Test Type Summary Custion Action
 'on': workflow_dispatch
 jobs:
   publish-test-results:
