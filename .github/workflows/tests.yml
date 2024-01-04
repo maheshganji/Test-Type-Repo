@@ -24,21 +24,21 @@ jobs:
           context-github: '${{ toJSON(github) }}'
           xml-report-filename: JestFolder/jest-junit.xml
           
-  integrationTest:
-    name: Integration  Test
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - name: ServiceNow DevOps NUnit Test Results
-        uses: ServiceNow/servicenow-devops-test-report@dev
-        with:
-          devops-integration-user-name: '${{ secrets.SN_DEVOPS_USER }}'
-          devops-integration-user-password: '${{ secrets.SN_DEVOPS_PASSWORD }}'
-          instance-url: '${{ secrets.SN_INSTANCE_NAME }}'
-          tool-id: '${{ secrets.SN_ORCH_TOOL_ID }}'
-          job-name: Test
-          context-github: '${{ toJSON(github) }}'
-          xml-report-filename: Test-Type-Repo/blob/main/NunitFolder/NUnit.xml
+  # integrationTest:
+  #   name: Integration  Test
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: ServiceNow DevOps NUnit Test Results
+  #       uses: ServiceNow/servicenow-devops-test-report@dev
+  #       with:
+  #         devops-integration-user-name: '${{ secrets.SN_DEVOPS_USER }}'
+  #         devops-integration-user-password: '${{ secrets.SN_DEVOPS_PASSWORD }}'
+  #         instance-url: '${{ secrets.SN_INSTANCE_NAME }}'
+  #         tool-id: '${{ secrets.SN_ORCH_TOOL_ID }}'
+  #         job-name: Test
+  #         context-github: '${{ toJSON(github) }}'
+  #         xml-report-filename: Test-Type-Repo/blob/main/NunitFolder/NUnit.xml
 
 
 
