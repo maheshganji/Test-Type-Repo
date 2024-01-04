@@ -58,7 +58,7 @@ jobs:
 
   UnitTest:
     name: Unit Test
-    needs: integrationTest
+    needs: XUnitTest
     runs-on: ubuntu-latest  
     steps:
       - name: ServiceNow DevOps MSTest Results
