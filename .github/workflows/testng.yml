@@ -38,7 +38,7 @@ jobs:
                   # XUnit xml report file name with path
                   xml-report-filename: JestFolder/jest-junit.xml #valid-nunit.xml #invalid_test_type.xml #valid-nunit.xml #invalid_test_type.xml #testResultsFolder/ #valid-xunit.xml  #testng.xml #valid-nunit.xml #testng.xml  #valid-nunit.xml #valid-MSTest.trx #testng.xml #valid-xunit.xml 
             
-            # - name: ServiceNow DevOps N Unit Test Results
+            # - name: ServiceNow DevOps NUnit Test Results
             #   uses: ServiceNow/servicenow-devops-test-report@dev
             #   with:
             #       devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
