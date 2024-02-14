@@ -52,7 +52,7 @@ jobs:
             # devops-integration-user-name: '${{ secrets.SN_DEVOPS_USER }}'
             # devops-integration-user-password: '${{ secrets.SN_DEVOPS_PASSWORD }}'
             # ServiceNow Instance URL
-            instance-url: ${{ secrets.SN_INSTANCE_URL }}
+            instance-url: ${{ secrets.SN_INSTANCE_NAME }}
             # Orchestration Tool Id
             tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
             # GitHub Context
