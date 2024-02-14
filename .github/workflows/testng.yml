@@ -159,7 +159,7 @@ jobs:
                   
   deploy:
     name: Deploy
-    needs: ServiceNowSecurityScanResults
+    needs: registerPackage
     runs-on: ubuntu-latest
     steps:     
       - name: ServiceNow Change
